@@ -5,11 +5,10 @@
 Inspired by other popular anonymized social media, we created stackz to allow users to share their thoughts as freely and interact with other users through private messages and posts. This working model currently relies on a firebase database to store users' posts and messages for other users to visit, comment, like, and store posts for convenient access. 
 
 ## 💡 Highlights
-- Concise, responsive, multi-theme UI
 - Stacks of anonymized stories users can view and comment on
 - No profiles, completely anonymous
 - Share thoughts and hear from people halfway around the world
-- Vector animation powered by [lottie](http://airbnb.io/lottie/#/README)
+- Concise, responsive, multi-theme UI
 
 ## ⛓️ Dependencies
 - Swift 5
@@ -44,6 +43,7 @@ pod install
 
 ## Built With
 
+* Vector animation powered by [lottie](http://airbnb.io/lottie/#/README)
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
