@@ -1,3 +1,18 @@
+# Manual .gitignores
+
+# Firebase
+googleservice-info.plist
+
+# Credentials
+
+# Mac OS Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
