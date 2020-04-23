@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeedVC.swift
 //  stackz
 //
 //  Created by James Jung on 4/2/20.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
 
 }
 
