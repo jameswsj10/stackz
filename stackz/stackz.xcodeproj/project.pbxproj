@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474CC37624527A89008C30BA /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CC37524527A89008C30BA /* Firebase.swift */; };
 		47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CCE24510FA400BE1476 /* SavedVC.swift */; };
 		47BF8CD12451110600BE1476 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD02451110600BE1476 /* Post.swift */; };
 		47BF8CD32451111000BE1476 /* PostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD22451111000BE1476 /* PostHandler.swift */; };
-		47BF8CD52451116D00BE1476 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD42451116D00BE1476 /* APIManager.swift */; };
-		47BF8CD72451117B00BE1476 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD62451117B00BE1476 /* APIResponse.swift */; };
 		47BF8CD92451121A00BE1476 /* MyPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD82451121A00BE1476 /* MyPostsVC.swift */; };
 		47BF8CDB2451129B00BE1476 /* SavedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CDA2451129B00BE1476 /* SavedCollectionCell.swift */; };
 		47BF8CDD245112EF00BE1476 /* MyPostsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CDC245112EF00BE1476 /* MyPostsCollectionCell.swift */; };
@@ -45,11 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474CC37524527A89008C30BA /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		47BF8CCE24510FA400BE1476 /* SavedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
 		47BF8CD02451110600BE1476 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		47BF8CD22451111000BE1476 /* PostHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandler.swift; sourceTree = "<group>"; };
-		47BF8CD42451116D00BE1476 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		47BF8CD62451117B00BE1476 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		47BF8CD82451121A00BE1476 /* MyPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsVC.swift; sourceTree = "<group>"; };
 		47BF8CDA2451129B00BE1476 /* SavedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCollectionCell.swift; sourceTree = "<group>"; };
 		47BF8CDC245112EF00BE1476 /* MyPostsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsCollectionCell.swift; sourceTree = "<group>"; };
@@ -175,8 +173,7 @@
 			children = (
 				47BF8CD02451110600BE1476 /* Post.swift */,
 				47BF8CD22451111000BE1476 /* PostHandler.swift */,
-				47BF8CD42451116D00BE1476 /* APIManager.swift */,
-				47BF8CD62451117B00BE1476 /* APIResponse.swift */,
+				474CC37524527A89008C30BA /* Firebase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,11 +324,10 @@
 				47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */,
 				47BF8CD32451111000BE1476 /* PostHandler.swift in Sources */,
 				47EBD3A72436B0CB000EA8A0 /* AppDelegate.swift in Sources */,
+				474CC37624527A89008C30BA /* Firebase.swift in Sources */,
 				47EBD3A92436B0CB000EA8A0 /* SceneDelegate.swift in Sources */,
 				47BF8CDF2451131C00BE1476 /* SavedWeeklyCollection.swift in Sources */,
 				47BF8CD12451110600BE1476 /* Post.swift in Sources */,
-				47BF8CD72451117B00BE1476 /* APIResponse.swift in Sources */,
-				47BF8CD52451116D00BE1476 /* APIManager.swift in Sources */,
 				47BF8CDD245112EF00BE1476 /* MyPostsCollectionCell.swift in Sources */,
 				47BF8CD92451121A00BE1476 /* MyPostsVC.swift in Sources */,
 			);

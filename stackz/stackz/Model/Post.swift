@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+// Create global instance of the feed for testing
+var demoFeed = DemoPosts()
+
 class Post {
     var title: String!
     var text: String!
@@ -29,3 +32,13 @@ class Post {
     }
     
 }
+
+func DemoPosts() -> [Post] {
+    let posts: [Post] = [
+        Post(title: "title1", text: "text1"),
+        Post(title: "t2", text: "text2"),
+        Post(title: "dfsad", text: "asdfasdf")
+    ]
+    return posts
+}
+

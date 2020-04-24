@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class MyPostsVC: UIViewController {
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
