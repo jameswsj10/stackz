@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 
 class MyPostsCollectionCell: UICollectionViewCell {
+    @IBOutlet weak var title: UILabel!
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate {
+extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // when each post is tapped, pull up the post
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -25,6 +25,10 @@ extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.title.text = demoFeed[indexPath.row].title
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
     }
     
     

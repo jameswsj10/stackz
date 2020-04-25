@@ -1,0 +1,24 @@
+TODO
+- add Date variable to post class
+- create basic outline of addPostVC
+- store UserDefaults in addPostVC
+- create basic outline of PostDetailVC
+- search bar to work (filter)
+
+Stack
+- research for stack layout
+- implement stack layout --> try with demo feed for now
+
+Database
+- setup realtime database
+	- figure out how we're going to save each user's post so that people can 
+		- save posts (anyone's)
+		- comment on posts (anyone's)
+		- delete posts (only my posts)
+- modify addVC to update to db
+- modify stack retrieval from db
+- figure out how to retrieve from same db and upload in 3 separate collectionview
+- modify PostDetailVC 
+	- update comments to database
+	- save posts to database
+	- delete post (only creator)
