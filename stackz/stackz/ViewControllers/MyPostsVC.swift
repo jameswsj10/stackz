@@ -18,6 +18,11 @@ class MyPostsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        collection.reloadData()
+    }
+    @IBOutlet weak var collection: UICollectionView!
+    
     @IBAction func addPost(_ sender: Any) {
         performSegue(withIdentifier: "addPost", sender: self)
     }
