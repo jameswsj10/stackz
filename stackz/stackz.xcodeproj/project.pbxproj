@@ -10,6 +10,7 @@
 		47394ACA2453AEEA0098B4A2 /* addPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47394AC92453AEEA0098B4A2 /* addPostVC.swift */; };
 		47394ACC2453B7C60098B4A2 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47394ACB2453B7C60098B4A2 /* PostDetailVC.swift */; };
 		474CC37624527A89008C30BA /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CC37524527A89008C30BA /* Firebase.swift */; };
+		479B6F6F245A37C10096D58E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B6F6E245A37C10096D58E /* Util.swift */; };
 		47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CCE24510FA400BE1476 /* SavedVC.swift */; };
 		47BF8CD12451110600BE1476 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD02451110600BE1476 /* Post.swift */; };
 		47BF8CD32451111000BE1476 /* PostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD22451111000BE1476 /* PostHandler.swift */; };
@@ -49,6 +50,7 @@
 		47394AC92453AEEA0098B4A2 /* addPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPostVC.swift; sourceTree = "<group>"; };
 		47394ACB2453B7C60098B4A2 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
 		474CC37524527A89008C30BA /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		479B6F6E245A37C10096D58E /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		47BF8CCE24510FA400BE1476 /* SavedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
 		47BF8CD02451110600BE1476 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		47BF8CD22451111000BE1476 /* PostHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandler.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				47BF8CD02451110600BE1476 /* Post.swift */,
 				47BF8CD22451111000BE1476 /* PostHandler.swift */,
 				474CC37524527A89008C30BA /* Firebase.swift */,
+				479B6F6E245A37C10096D58E /* Util.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				47394ACA2453AEEA0098B4A2 /* addPostVC.swift in Sources */,
 				47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */,
 				47BF8CD32451111000BE1476 /* PostHandler.swift in Sources */,
+				479B6F6F245A37C10096D58E /* Util.swift in Sources */,
 				47EBD3A72436B0CB000EA8A0 /* AppDelegate.swift in Sources */,
 				474CC37624527A89008C30BA /* Firebase.swift in Sources */,
 				47EBD3A92436B0CB000EA8A0 /* SceneDelegate.swift in Sources */,

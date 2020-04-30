@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EkV-3b-pQI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EkV-3b-pQI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -212,7 +212,9 @@
                         <viewLayoutGuide key="safeArea" id="Dm6-a0-kKx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Posts" image="rectangle.stack.person.crop" catalog="system" id="KQo-Te-3bF"/>
+                    <navigationItem key="navigationItem" id="2hs-kf-lLS"/>
                     <connections>
+                        <outlet property="collection" destination="Im7-uz-PK3" id="BWZ-P1-4wY"/>
                         <outlet property="searchBar" destination="5UJ-6x-dU7" id="Hj7-99-4pC"/>
                         <segue destination="Ui9-gr-nsl" kind="presentation" identifier="addPost" modalPresentationStyle="fullScreen" id="VeQ-yI-9R1"/>
                     </connections>
@@ -228,14 +230,52 @@
                     <view key="view" contentMode="scaleToFill" id="XTS-Xu-J9L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFT-Mr-4yV">
+                                <rect key="frame" x="74" y="199" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Insert Text Here ..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OsU-AL-ead">
+                                <rect key="frame" x="74" y="264" width="280" height="387"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncl-vb-nAC">
+                                <rect key="frame" x="112" y="673" width="61" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPost:" destination="Ui9-gr-nsl" eventType="touchUpInside" id="cxU-Jn-c8J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXY-zB-Ysm">
+                                <rect key="frame" x="267" y="673" width="39" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="createPost:" destination="Ui9-gr-nsl" eventType="touchUpInside" id="YP0-kj-gKD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KU5-Vk-Wdp"/>
                     </view>
                     <navigationItem key="navigationItem" id="cQt-LV-zDD"/>
+                    <connections>
+                        <outlet property="text" destination="OsU-AL-ead" id="pWt-Vy-i32"/>
+                        <outlet property="titleText" destination="VFT-Mr-4yV" id="3Qb-GY-ssJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnT-Fw-b4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2481" y="271"/>
+            <point key="canvasLocation" x="2479.7101449275365" y="270.53571428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xcc-KY-1Sb">

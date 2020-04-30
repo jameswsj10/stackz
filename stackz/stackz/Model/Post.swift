@@ -16,11 +16,13 @@ class Post {
     var title: String!
     var text: String!
     var comments: [String]
+    var date: Date
     
     init(title: String, text: String) {
         self.title = title
         self.text = text
         self.comments = []
+        self.date = Date()
     }
     
     func addComment(comment: String?) {
