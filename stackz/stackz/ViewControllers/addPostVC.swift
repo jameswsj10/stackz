@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class addPostVC: UIViewController {
+class addPostVC: UIViewController, UITextViewDelegate {
     var chosenPost: Post!
     
     @IBOutlet weak var titleText: UITextField!
@@ -17,7 +17,22 @@ class addPostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        text.delegate = self
+        text.textColor = UIColor.lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Insert Text Here ..."
+            textView.textColor = UIColor.lightGray
+        }
     }
     
     @IBAction func createPost(_ sender: Any) {
@@ -26,9 +41,7 @@ class addPostVC: UIViewController {
         chosenPost = Post(title: title, text: textContent)
         demoFeed.append(chosenPost)
         
-        let alert = UIAlertController(title: "Nice!", message: "Go back to My Posts to see your new post.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        self.present(alert, animated: true)
+        util.displayAlertDismiss(title: "Nice!", message: "Posted Successfully", vc: self)
     }
     
     @IBAction func cancelPost(_ sender: Any) {
