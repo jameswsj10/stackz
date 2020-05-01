@@ -1,7 +1,4 @@
 TODO
-- add Date variable to post class
-- create basic outline of addPostVC
-- store UserDefaults in addPostVC
 - create basic outline of PostDetailVC
 - search bar to work (filter)
 
