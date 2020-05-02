@@ -11,12 +11,12 @@ import UIKit
 
 extension MyPostsVC: UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return demoFeed.count
+        return curUserPosts!.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myPosts", for: indexPath) as! MyPostsCollectionCell
-        cell.title.text = demoFeed[indexPath.row].title
+        cell.title.text = curUserPosts![indexPath.row].title
         
         return cell
     }
@@ -30,7 +30,7 @@ extension MyPostsVC: UICollectionViewDataSource, UICollectionViewDelegate, UISea
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        postToDisplay = demoFeed[indexPath.row]
+        postToDisplay = curUserPosts![indexPath.row]
         self.performSegue(withIdentifier: "myPostToDetail", sender: self)
     }
     
