@@ -40,6 +40,7 @@ class addPostVC: UIViewController, UITextViewDelegate {
         let textContent = text.text!
         chosenPost = Post(title: title, text: textContent)
         demoFeed.append(chosenPost)
+        Firebase.addPostToDB(post: chosenPost)
         
         util.displayAlertDismiss(title: "Nice!", message: "Posted Successfully", vc: self)
     }
