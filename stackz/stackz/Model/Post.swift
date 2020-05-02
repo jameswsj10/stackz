@@ -37,7 +37,7 @@ class Post {
 
 func DemoPosts() -> [Post] {
     let posts: [Post] = [
-        Post(title: "title1", text: "text1"),
+        Post(title: "title1", text: "text1 asdfasdfa asdfk asdfj as sdfj askdf jsdfj as fjas lkfaj ldkj ;aslf jasld jasl;kj fal;skjf lskadj flasdkjf ;salfj slak jlas;k jfas;lk jfls;adk jaslk jalsk fja;sldk ja;slkf sa;l ka;f js;alkfj a;slk fjsl;k fja; laksjf laksj "),
         Post(title: "t2", text: "text2"),
         Post(title: "dfsad", text: "asdfasdf")
     ]

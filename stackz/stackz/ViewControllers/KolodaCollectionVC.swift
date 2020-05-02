@@ -24,7 +24,6 @@ extension FeedVC: KolodaViewDelegate, KolodaViewDataSource {
     }
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        print("current post view: \(post_stacks[index])")
         return post_stacks[index]
     }
 
