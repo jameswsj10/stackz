@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuth
+
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var nameTxtField: UITextField!
@@ -50,14 +52,14 @@ class SignUpVC: UIViewController {
                     return
                 }
                 
-                self.displayAlert(title: "Welcome to StayHome", message: "Login using your new user account")
+                util.displayAlertDismiss(title: "Welcome to Stackz", message: "Login using your new user account", vc: self)
                 let db = Database.database().reference()
                 let usersNode = db.child("Users")
                 let newUserId = usersNode.childByAutoId().key
                 let userNode = usersNode.child(newUserId!)
                 userNode.updateChildValues(["name": name, "email": email,
                                             "username": username, ])
-                self.dismiss(animated: true, completion: nil)
+//                self.dismiss(animated: true, completion: nil)
             }
         }
         

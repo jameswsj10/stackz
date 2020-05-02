@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EkV-3b-pQI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLO-py-yiO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -292,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="2479.7101449275365" y="270.53571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--AuthenticationVC-->
         <scene sceneID="egK-zY-k2q">
             <objects>
-                <viewController id="eLO-py-yiO" sceneMemberID="viewController">
+                <viewController id="eLO-py-yiO" customClass="AuthenticationVC" customModule="stackz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sfD-Z6-Mom">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,6 +308,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tabLogInButton:" destination="eLO-py-yiO" eventType="touchUpInside" id="8bS-FL-ajn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gq6-Lh-RUs">
                                 <rect key="frame" x="45" y="541" width="325" height="34"/>
@@ -352,6 +355,9 @@
                         <viewLayoutGuide key="safeArea" id="KEL-rq-rAa"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="Gq6-Lh-RUs" id="4N0-ea-Vcg"/>
+                        <outlet property="loginButton" destination="BZE-6k-HUI" id="76Z-eg-NRq"/>
+                        <outlet property="passwordTextField" destination="bkw-He-3Yj" id="I0D-rN-43I"/>
                         <segue destination="EkV-3b-pQI" kind="presentation" identifier="toFeed" modalPresentationStyle="fullScreen" id="73i-5E-kgJ"/>
                     </connections>
                 </viewController>
@@ -359,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="-1178" y="-1072"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="KXd-1g-Omd">
             <objects>
-                <viewController id="NKZ-Q8-dUu" sceneMemberID="viewController">
+                <viewController id="NKZ-Q8-dUu" customClass="SignUpVC" customModule="stackz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSe-6b-mQn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,6 +381,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginRegisterPressed:" destination="NKZ-Q8-dUu" eventType="touchUpInside" id="T8B-XB-NfD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70y-I7-HeK">
                                 <rect key="frame" x="45" y="430" width="325" height="34"/>
@@ -406,6 +415,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" image="Left Arrow"/>
+                                <connections>
+                                    <action selector="backArrowPressed:" destination="NKZ-Q8-dUu" eventType="touchUpInside" id="kZR-Eg-ILL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register To Socials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIf-3h-xNr">
                                 <rect key="frame" x="45" y="143" width="228" height="34"/>
@@ -433,6 +445,13 @@ and Privacy Policy of Socials</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jaz-TY-cqP"/>
                     </view>
+                    <connections>
+                        <outlet property="RegisterButton" destination="9RN-dR-W1t" id="FzS-d9-Y9a"/>
+                        <outlet property="emailTxtField" destination="cGR-Tu-6Im" id="Mab-On-3Pn"/>
+                        <outlet property="nameTxtField" destination="70y-I7-HeK" id="rTd-S3-1Kj"/>
+                        <outlet property="passwordTxtField" destination="hfU-DT-clU" id="Z6i-Bj-Jcv"/>
+                        <outlet property="usernameTxtField" destination="l1m-fS-2KM" id="JMs-AO-M5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie4-SH-jlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
