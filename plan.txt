@@ -6,6 +6,8 @@ Stack
 - research for stack layout
 - implement stack layout --> try with demo feed for now
 
+Authentication
+
 Database
 - setup realtime database
 	- figure out how we're going to save each user's post so that people can 

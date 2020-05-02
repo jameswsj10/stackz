@@ -16,11 +16,13 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardView.delegate = self as? KolodaViewDelegate
-        cardView.dataSource = self as? KolodaViewDataSource
+        cardView.delegate = self
+        cardView.dataSource = self
         for feed in demoFeed {
             post_stacks.append(postView(frame: CGRect(x: 0, y: 0, width: 300, height: 500), title: feed.title, text: feed.text))
         }
+        print(post_stacks)
+        cardView.reloadData()
     }
 
     

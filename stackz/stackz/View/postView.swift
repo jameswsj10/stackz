@@ -16,7 +16,7 @@ class postView: UIView {
 //    var text: String
     
     init(frame: CGRect, title: String, text: String) {
-        super.init(frame: frame)
+        super.init(frame: CGRect(x: 57, y: 200, width: 280, height: 480))
 //        self.title = title
 //        self.text = text
         setupView(title: title, text: text)
@@ -27,8 +27,10 @@ class postView: UIView {
     }
     
     private func setupView(title: String, text: String) {
+        backgroundColor = .white
+        
         let headerTitle: UILabel = {
-          let headerTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+          let headerTitle = UILabel(frame: CGRect(x: 57, y: 200, width: 280, height: 40))
           headerTitle.font = UIFont.systemFont(ofSize: 22, weight: .medium)
             headerTitle.text = title
           headerTitle.textAlignment = .center
@@ -36,7 +38,7 @@ class postView: UIView {
         }()
         
         let bodyText: UILabel = {
-            let bodyText = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+            let bodyText = UILabel(frame: CGRect(x: 57, y: 200, width: 280, height: 20))
             bodyText.font = UIFont.systemFont(ofSize: 15, weight: .light)
             bodyText.text = text
             bodyText.textAlignment = .center
