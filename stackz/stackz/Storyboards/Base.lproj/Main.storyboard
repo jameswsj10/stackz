@@ -32,6 +32,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLe-Ni-PyH">
+                                <rect key="frame" x="320" y="60" width="37" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJz-rq-2kz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -126,6 +135,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Saved" image="tray.and.arrow.down" catalog="system" id="2Mi-tj-qhg"/>
                     <connections>
+                        <outlet property="savedCollection" destination="h2M-Ek-1bb" id="Tmt-3Q-f3W"/>
                         <segue destination="93Y-gR-cR4" kind="presentation" identifier="savedToDetail" id="KCD-CY-tIw"/>
                     </connections>
                 </viewController>
@@ -495,6 +505,6 @@ and Privacy Policy of Socials</string>
         <image name="tray.and.arrow.down" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xa9-Do-AbK"/>
+        <segue reference="KCD-CY-tIw"/>
     </inferredMetricsTieBreakers>
 </document>

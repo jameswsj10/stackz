@@ -56,6 +56,7 @@ class SignUpVC: UIViewController {
                 let db = Database.database().reference()
                 let usersNode = db.child("Users")
                 let newUserId = usersNode.childByAutoId().key
+                UserDefaults.standard.set(newUserId, forKey: "ID")
                 let userNode = usersNode.child(newUserId!)
                 userNode.updateChildValues(["name": name, "email": email,
                                             "username": username, ])
