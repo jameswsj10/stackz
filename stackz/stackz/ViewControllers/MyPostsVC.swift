@@ -12,12 +12,14 @@ import UIKit
 class MyPostsVC: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var searchBar: UISearchBar!
+    var curUserPosts : [Post]?
     
     var postToDisplay : Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        curUserPosts = Firebase.accessCurUserPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -17,12 +17,12 @@ extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
 //    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return demoFeed.count
+        return curUserSaved!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Weekly", for: indexPath) as! SavedCollectionCell
-        cell.title.text = demoFeed[indexPath.row].title
+        cell.title.text = curUserSaved![indexPath.row].title
         
         return cell
     }

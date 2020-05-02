@@ -14,10 +14,12 @@ class SavedVC: UIViewController {
     var monthly: [Post]?
     var earlier: [Post]?
     var postToDisplay: Post?
+    var curUserSaved: [Post]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        curUserSaved = Firebase.accessCurUserSaved()
     }
     
 }
