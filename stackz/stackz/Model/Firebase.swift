@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 
 var ref: DatabaseReference!
-
+var curUserUID : String!
 
 class Firebase {
     static var ref = Database.database().reference()
@@ -27,7 +27,7 @@ class Firebase {
                     "date" : formatter.string(from: post.date),
                     "comments" : post.comments])
         // add post to current user's my post children
-        self.ref.child("Users/\(user!.uid)/myPosts").updateChildValues([
+        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts").updateChildValues([
             "title" : post.title!,
             "text" : post.text!,
             "date" : formatter.string(from: post.date),
@@ -39,7 +39,7 @@ class Firebase {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         var user = Auth.auth().currentUser;
-        let postRef = ref.child("Users/\(user!.uid)/myPosts")
+        let postRef = ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts")
         var curUserPosts: [Post] = []
         let refHandle = postRef.observe(DataEventType.value, with: { (snapshot) in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -57,7 +57,7 @@ class Firebase {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         var user = Auth.auth().currentUser;
-        let postRef = ref.child("Users/\(user!.uid)/saved")
+        let postRef = ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/saved")
         var curUserPosts: [Post] = []
         let refHandle = postRef.observe(DataEventType.value, with: { (snapshot) in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
