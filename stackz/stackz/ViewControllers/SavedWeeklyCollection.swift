@@ -17,12 +17,12 @@ extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
 //    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return curUserSaved!.count
+        return curUserSaved.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Weekly", for: indexPath) as! SavedCollectionCell
-        cell.title.text = curUserSaved![indexPath.row].title
+        cell.title.text = curUserSaved[indexPath.row].title
         
         return cell
     }
@@ -31,7 +31,7 @@ extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
         return CGSize(width: 100, height: 100)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        postToDisplay = demoFeed[indexPath.row]
+        postToDisplay = curUserSaved[indexPath.row]
         self.performSegue(withIdentifier: "savedToDetail", sender: self)
     }
     

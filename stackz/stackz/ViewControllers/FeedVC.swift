@@ -29,8 +29,8 @@ class FeedVC: UIViewController {
 //        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             super.viewDidLoad()
-            print(self.post_array)
-            print(self.post_stacks)
+            //print(self.post_array)
+            //print(self.post_stacks)
             self.cardView.reloadData()
         }
     }
@@ -44,7 +44,7 @@ class FeedVC: UIViewController {
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             
             for (key, val) in postDict {
-                print(key, val)
+                //print(key, val)
                 let post = Post(title: val["title"] as! String, text: val["text"] as! String)
                 post.date = formatter.date(from: val["date"] as! String)!
                 self.post_array.append(post)

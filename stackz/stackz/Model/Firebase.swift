@@ -37,7 +37,7 @@ class Firebase {
     static func addCurUserSaved(post: Post) {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts").updateChildValues([
+        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/saved/\(post.title!)").updateChildValues([
         "title" : post.title!,
         "text" : post.text!,
         "date" : formatter.string(from: post.date),
