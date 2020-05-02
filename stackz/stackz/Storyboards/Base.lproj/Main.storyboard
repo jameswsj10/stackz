@@ -113,6 +113,9 @@
                         <viewLayoutGuide key="safeArea" id="0pQ-Fq-up7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Saved" image="tray.and.arrow.down" catalog="system" id="2Mi-tj-qhg"/>
+                    <connections>
+                        <segue destination="93Y-gR-cR4" kind="presentation" identifier="savedToDetail" id="KCD-CY-tIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJ8-kq-bIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,6 +220,7 @@
                         <outlet property="collection" destination="Im7-uz-PK3" id="BWZ-P1-4wY"/>
                         <outlet property="searchBar" destination="5UJ-6x-dU7" id="Hj7-99-4pC"/>
                         <segue destination="Ui9-gr-nsl" kind="presentation" identifier="addPost" modalPresentationStyle="fullScreen" id="VeQ-yI-9R1"/>
+                        <segue destination="93Y-gR-cR4" kind="presentation" identifier="myPostToDetail" id="Xa9-Do-AbK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpf-ML-39V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -296,10 +300,21 @@
             </objects>
             <point key="canvasLocation" x="403" y="-470"/>
         </scene>
+        <!--showPost-->
+        <scene sceneID="FmL-sM-tw6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="showPost" id="93Y-gR-cR4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkJ-EC-2xT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="784"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rectangle.stack.person.crop" catalog="system" width="64" height="60"/>
         <image name="square.stack.3d.up" catalog="system" width="64" height="62"/>
         <image name="tray.and.arrow.down" catalog="system" width="64" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xa9-Do-AbK"/>
+    </inferredMetricsTieBreakers>
 </document>

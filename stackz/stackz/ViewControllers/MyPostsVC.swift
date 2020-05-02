@@ -13,6 +13,8 @@ class MyPostsVC: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var postToDisplay : Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

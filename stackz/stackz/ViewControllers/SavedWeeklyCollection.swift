@@ -30,6 +30,15 @@ extension SavedVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 100)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        postToDisplay = demoFeed[indexPath.row]
+        self.performSegue(withIdentifier: "savedToDetail", sender: self)
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let details = segue.destination as? PostDetailVC, segue.identifier == "savedToDetail" {
+            details.recievedPost = self.postToDisplay
+        }
+    }
+
 }

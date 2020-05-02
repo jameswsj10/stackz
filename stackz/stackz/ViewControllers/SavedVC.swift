@@ -13,6 +13,7 @@ class SavedVC: UIViewController {
     var weekly: [Post]?
     var monthly: [Post]?
     var earlier: [Post]?
+    var postToDisplay: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()

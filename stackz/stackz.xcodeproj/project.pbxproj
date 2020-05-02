@@ -30,6 +30,9 @@
 		5C0C043008321AE46F8FED6F /* Pods_stackz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3ADC8BD2D7AF03F4CAAC19 /* Pods_stackz.framework */; };
 		80439778E4E1C4D111DEF63F /* Pods_stackzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61B79E514EB23E97D0B518C /* Pods_stackzTests.framework */; };
 		AC308192245CCD83004E0156 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC308191245CCD83004E0156 /* GoogleService-Info.plist */; };
+		AC308194245D4CF9004E0156 /* showPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC308193245D4CF9004E0156 /* showPost.storyboard */; };
+		AC308196245D5655004E0156 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC308195245D5655004E0156 /* Authentication.swift */; };
+		AC308198245D56F7004E0156 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC308197245D56F7004E0156 /* SignupVC.swift */; };
 		B83FA0088B0183BC2965AA62 /* Pods_stackz_stackzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F58220A27E10A0E9E0906A /* Pods_stackz_stackzUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,9 @@
 		4BD4550015DF9C022014B4C9 /* Pods-stackz-stackzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stackz-stackzUITests.debug.xcconfig"; path = "Target Support Files/Pods-stackz-stackzUITests/Pods-stackz-stackzUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0A68DF1B2B2D596CE7DD4D /* Pods-stackzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stackzTests.release.xcconfig"; path = "Target Support Files/Pods-stackzTests/Pods-stackzTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC308191245CCD83004E0156 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC308193245D4CF9004E0156 /* showPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = showPost.storyboard; sourceTree = "<group>"; };
+		AC308195245D5655004E0156 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		AC308197245D56F7004E0156 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B61B79E514EB23E97D0B518C /* Pods_stackzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stackzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E2B6D5D10631B50DB09198 /* Pods-stackz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stackz.debug.xcconfig"; path = "Target Support Files/Pods-stackz/Pods-stackz.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E4E55E2AE80F942032B63F /* Pods-stackz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stackz.release.xcconfig"; path = "Target Support Files/Pods-stackz/Pods-stackz.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				47BF8CE02451132700BE1476 /* MyPostsCollectionVC.swift */,
 				47394AC92453AEEA0098B4A2 /* addPostVC.swift */,
 				47394ACB2453B7C60098B4A2 /* PostDetailVC.swift */,
+				AC308197245D56F7004E0156 /* SignupVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				47BF8CD22451111000BE1476 /* PostHandler.swift */,
 				474CC37524527A89008C30BA /* Firebase.swift */,
 				479B6F6E245A37C10096D58E /* Util.swift */,
+				AC308195245D5655004E0156 /* Authentication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			children = (
 				47EBD3B12436B0D0000EA8A0 /* LaunchScreen.storyboard */,
 				47EBD3AC2436B0CB000EA8A0 /* Main.storyboard */,
+				AC308193245D4CF9004E0156 /* showPost.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -352,6 +361,7 @@
 				AC308192245CCD83004E0156 /* GoogleService-Info.plist in Resources */,
 				47EBD3B02436B0D0000EA8A0 /* Assets.xcassets in Resources */,
 				47EBD3AE2436B0CB000EA8A0 /* Main.storyboard in Resources */,
+				AC308194245D4CF9004E0156 /* showPost.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +497,7 @@
 				47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */,
 				47BF8CD32451111000BE1476 /* PostHandler.swift in Sources */,
 				479B6F6F245A37C10096D58E /* Util.swift in Sources */,
+				AC308198245D56F7004E0156 /* SignupVC.swift in Sources */,
 				47EBD3A72436B0CB000EA8A0 /* AppDelegate.swift in Sources */,
 				474CC37624527A89008C30BA /* Firebase.swift in Sources */,
 				47EBD3A92436B0CB000EA8A0 /* SceneDelegate.swift in Sources */,
@@ -494,6 +505,7 @@
 				47BF8CD12451110600BE1476 /* Post.swift in Sources */,
 				47BF8CDD245112EF00BE1476 /* MyPostsCollectionCell.swift in Sources */,
 				47BF8CD92451121A00BE1476 /* MyPostsVC.swift in Sources */,
+				AC308196245D5655004E0156 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

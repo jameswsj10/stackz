@@ -29,4 +29,14 @@ extension MyPostsVC: UICollectionViewDataSource, UICollectionViewDelegate, UISea
         return CGSize(width: 160, height: 320)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        postToDisplay = demoFeed[indexPath.row]
+        self.performSegue(withIdentifier: "myPostToDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let details = segue.destination as? PostDetailVC, segue.identifier == "myPostToDetail" {
+            details.recievedPost = self.postToDisplay
+        }
+    }
 }
