@@ -37,6 +37,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stack" image="square.stack.3d.up" catalog="system" id="tOT-Ks-h5x"/>
+                    <connections>
+                        <outlet property="cardView" destination="ZhT-dX-fJC" id="hZu-DR-0EZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
