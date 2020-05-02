@@ -10,6 +10,8 @@
 		47394ACA2453AEEA0098B4A2 /* addPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47394AC92453AEEA0098B4A2 /* addPostVC.swift */; };
 		47394ACC2453B7C60098B4A2 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47394ACB2453B7C60098B4A2 /* PostDetailVC.swift */; };
 		474CC37624527A89008C30BA /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CC37524527A89008C30BA /* Firebase.swift */; };
+		475D912B245CF62100582F09 /* KolodaCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D912A245CF62100582F09 /* KolodaCollectionVC.swift */; };
+		475D912D245CF77800582F09 /* postView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D912C245CF77800582F09 /* postView.swift */; };
 		479B6F6F245A37C10096D58E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B6F6E245A37C10096D58E /* Util.swift */; };
 		47BF8CCF24510FA400BE1476 /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CCE24510FA400BE1476 /* SavedVC.swift */; };
 		47BF8CD12451110600BE1476 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF8CD02451110600BE1476 /* Post.swift */; };
@@ -56,6 +58,8 @@
 		47394AC92453AEEA0098B4A2 /* addPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPostVC.swift; sourceTree = "<group>"; };
 		47394ACB2453B7C60098B4A2 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
 		474CC37524527A89008C30BA /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		475D912A245CF62100582F09 /* KolodaCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaCollectionVC.swift; sourceTree = "<group>"; };
+		475D912C245CF77800582F09 /* postView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postView.swift; sourceTree = "<group>"; };
 		479B6F6E245A37C10096D58E /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		47BF8CCE24510FA400BE1476 /* SavedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
 		47BF8CD02451110600BE1476 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				47EBD3AA2436B0CB000EA8A0 /* FeedVC.swift */,
+				475D912A245CF62100582F09 /* KolodaCollectionVC.swift */,
 				47BF8CCE24510FA400BE1476 /* SavedVC.swift */,
 				47BF8CDE2451131C00BE1476 /* SavedWeeklyCollection.swift */,
 				47BF8CD82451121A00BE1476 /* MyPostsVC.swift */,
@@ -205,6 +210,7 @@
 			children = (
 				47BF8CDA2451129B00BE1476 /* SavedCollectionCell.swift */,
 				47BF8CDC245112EF00BE1476 /* MyPostsCollectionCell.swift */,
+				475D912C245CF77800582F09 /* postView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +487,8 @@
 			files = (
 				47BF8CDB2451129B00BE1476 /* SavedCollectionCell.swift in Sources */,
 				47EBD3AB2436B0CB000EA8A0 /* FeedVC.swift in Sources */,
+				475D912B245CF62100582F09 /* KolodaCollectionVC.swift in Sources */,
+				475D912D245CF77800582F09 /* postView.swift in Sources */,
 				47BF8CE12451132700BE1476 /* MyPostsCollectionVC.swift in Sources */,
 				47394ACC2453B7C60098B4A2 /* PostDetailVC.swift in Sources */,
 				47394ACA2453AEEA0098B4A2 /* addPostVC.swift in Sources */,
