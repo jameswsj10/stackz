@@ -12,12 +12,15 @@ import Koloda
 
 class FeedVC: UIViewController {
     @IBOutlet weak var cardView: KolodaView!
+    var post_stacks: [postView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cardView.delegate = self as? KolodaViewDelegate
         cardView.dataSource = self as? KolodaViewDataSource
-        // Do any additional setup after loading the view.
+        for feed in demoFeed {
+            post_stacks.append(postView(frame: CGRect(x: 0, y: 0, width: 300, height: 500), title: feed.title, text: feed.text))
+        }
     }
 
     
