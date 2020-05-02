@@ -9,10 +9,15 @@ import UIKit
 import Foundation
 import Koloda
 
-class FeedVC: UIViewController, UIGestureRecognizerDelegate {
+class FeedVC: UIViewController {
     @IBOutlet weak var cardView: KolodaView!
     var post_stacks: [postView] = []
+    var post_array: [Post] = []
     
+    @IBAction func savePost(_ sender: Any) {
+        Firebase.addCurUserSaved(post: post_array[cardView.currentCardIndex])
+        util.displayAlert(title: "Post Saved!", message: "Check your Saved to view", vc: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         cardView.delegate = self
@@ -23,24 +28,7 @@ class FeedVC: UIViewController, UIGestureRecognizerDelegate {
         print(post_stacks)
         cardView.reloadData()
         
-        let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
-         lpgr.minimumPressDuration = 0.5
-         lpgr.delaysTouchesBegan = true
-         lpgr.delegate = self
-         self.view.addGestureRecognizer(lpgr)
     }
-    
-    func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
-        if gestureReconizer.state != UIGestureRecognizer.State.ended {
-            return
-        }
-        let alertController = UIAlertController(title: "Save this post?", message:
-           "save this post to your collection, or cancel to continue", preferredStyle: .alert)
-           alertController.addAction(UIAlertAction(title: "Save", style: .default,handler: nil))
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .default,handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
-    
     
 
 }

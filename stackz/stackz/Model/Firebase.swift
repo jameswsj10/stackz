@@ -27,17 +27,27 @@ class Firebase {
                     "date" : formatter.string(from: post.date),
                     "comments" : post.comments])
         // add post to current user's my post children
-        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts").updateChildValues([
+        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts/\(post.title!)").updateChildValues([
             "title" : post.title!,
             "text" : post.text!,
             "date" : formatter.string(from: post.date),
             "comments" : post.comments])
             
     }
+    static func addCurUserSaved(post: Post) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        self.ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts").updateChildValues([
+        "title" : post.title!,
+        "text" : post.text!,
+        "date" : formatter.string(from: post.date),
+        "comments" : post.comments])
+        
+    }
     
     static func accessCurUserPosts() -> [Post] {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        formatter.dateFormat = "MM/dd/yy"
         var user = Auth.auth().currentUser;
         let postRef = ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/myPosts")
         var curUserPosts: [Post] = []
@@ -45,17 +55,19 @@ class Firebase {
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             
             for (key, val) in postDict {
+                print(key, val)
                 let post = Post(title: val["title"] as! String, text: val["text"] as! String)
                 post.date = formatter.date(from: val["date"] as! String)!
                 curUserPosts.append(post)
             }
         })
+        print("done with firebase retrieval")
         return curUserPosts
     }
     
     static func accessCurUserSaved() -> [Post] {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        formatter.dateFormat = "MM/dd/yy"
         var user = Auth.auth().currentUser;
         let postRef = ref.child("Users/\(UserDefaults.standard.string(forKey: "ID")!)/saved")
         var curUserPosts: [Post] = []

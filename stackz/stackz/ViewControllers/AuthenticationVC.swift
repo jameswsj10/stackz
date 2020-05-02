@@ -26,7 +26,7 @@ class AuthenticationVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         loginButton.layer.cornerRadius = 3
-        currentFeed = Firebase.accessPostsInDB()
+
     }
     
     func handleLogin() {

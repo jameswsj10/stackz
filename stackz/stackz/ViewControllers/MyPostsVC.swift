@@ -20,6 +20,8 @@ class MyPostsVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         curUserPosts = Firebase.accessCurUserPosts()
+        collection.reloadData()
+        print("done with viewdidload")
     }
     
     override func viewDidAppear(_ animated: Bool) {
